@@ -1,3 +1,22 @@
+# MQMaker WiTi repo
+This is a repository originally cloned from [https://github.com/mqmaker/openwrt/](https://github.com/mqmaker/openwrt/).
+However, the author decided to purge his website and the repos, thus the current repo is not cloned from it.
+
+I made a quick and presumably reliable build of it.
+
+I am also planning to use MediaTek SDK-based branch of OpenWRT to try using second WAN port, but cannot guarantee any deadlines.
+
+## Known issues
+* Current distribution lacks certain packages, e.g. some Avahi dependencies fail to be installed
+* Python3 has issues with `setuptools-scm` module, it's not advised to install anything depending on it
+* WiTi only features 16 MB of Flash memory, it's not sufficient to put all packages on it.
+Please also checkout [OpenWRT Wiki](https://wiki.openwrt.org/toh/mqmaker/witi) related to the board.
+
+# Distribution
+I have made a tiny repository with [binary firmware for WiTi board](http://nb3.me/witi/) and a [repository of opkg packages](https://github.com/mqmaker/openwrt/) for it -- of course, not complete.
+Please use the [LEDE repository](http://downloads.lede-project.org/snapshots/targets/ramips/mt7621/packages) for any missing packages.
+
+# Original message from OpenWRT project
 This is the buildsystem for the OpenWrt Linux distribution.
 
 Please use "make menuconfig" to choose your preferred
